@@ -1,4 +1,4 @@
-Here is the HTML code for a friendly, modern e-commerce shop interface. It's a complete, functional webpage with a warm and approachable design.
+Here is the HTML code for a modern, friendly e-commerce shop interface with a warm and approachable design.
 ```html
 <!doctype html>
 <html lang="en">
@@ -824,4 +824,4 @@ Here is the HTML code for a friendly, modern e-commerce shop interface. It's a c
             <div class="category-tag">${p.category}</div>
             <div class="price-row">
               <div><span class="price">$${p.price.toLocaleString()}</span> ${p.oldPrice ? `<span class="old-price">$${p.oldPrice.toLocaleString()}</span>` : ''}</div>
-              <div class="rating">${'★'.repeat(Math.round(p.rating))} <span style="font-size:0.7rem;color:var(--muted)">($
+              <div class="rating">${'★'.repeat(Math.round(p.rating))} <span style="font-size:0.7rem;color:var(--muted)">(${p.reviews})</span></
