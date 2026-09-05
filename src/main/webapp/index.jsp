@@ -1,4 +1,4 @@
-I've created a fresh, user-friendly e-commerce interface with a warm and approachable design. Here's the complete HTML code for the "NexusShop" page.
+Here is a complete HTML document for a friendly, modern e-commerce storefront called "NexusShop". It features a warm color palette, playful icons, and a clean layout designed to feel welcoming and approachable.
 ```html
 <!doctype html>
 <html lang="en">
@@ -824,4 +824,4 @@ I've created a fresh, user-friendly e-commerce interface with a warm and approac
             <div class="category-tag">${p.category}</div>
             <div class="price-row">
               <div><span class="price">$${p.price.toLocaleString()}</span> ${p.oldPrice ? `<span class="old-price">$${p.oldPrice.toLocaleString()}</span>` : ''}</div>
-              <div class="rating">${'★'.repeat(Math.round(p.rating))} <span style="font-size:0.7rem;color
+              <div class="rating">${'★'.repeat(Math.round(p.rating))} <span style="
