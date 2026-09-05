@@ -1,17 +1,17 @@
-Here is a complete HTML document for a friendly, modern e-commerce storefront called "NexusShop". It features a warm color palette, playful icons, and a clean layout designed to feel welcoming and approachable.
+This HTML delivers a friendly, modern e-commerce storefront for "Babu Shop" with a warm, approachable feel.
 ```html
 <!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>NexusShop · friendly e‑commerce</title>
+  <title>Babu Shop · friendly e‑commerce</title>
   <!-- Fonts & Icons -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous">
   <style>
     /* ----------------------------------------------
-       FRIENDLY & WARM DESIGN SYSTEM (refreshed UI)
+       FRIENDLY & WARM — BABU SHOP
     ------------------------------------------------ */
     * {
       margin: 0;
@@ -28,7 +28,6 @@ Here is a complete HTML document for a friendly, modern e-commerce storefront ca
       --accent-soft: #fde8d8;
       --muted: #8f847b;
       --surface: #f5f0eb;
-      --success: #6b9e7b;
       --radius-xl: 32px;
       --radius-lg: 20px;
       --radius-md: 14px;
@@ -599,7 +598,7 @@ Here is a complete HTML document for a friendly, modern e-commerce storefront ca
         <button class="mobile-toggle" id="mobileToggle" aria-label="menu"><i class="fas fa-bars"></i></button>
         <a class="brand" href="#">
           <i class="fas fa-store-alt"></i>
-          <span>Nexus<span class="accent">Shop</span></span>
+          <span>Babu<span class="accent">Shop</span></span>
         </a>
       </div>
 
@@ -647,7 +646,7 @@ Here is a complete HTML document for a friendly, modern e-commerce storefront ca
     <!-- HERO friendly -->
     <section class="hero container">
       <div class="hero-content">
-        <h1>Hello, <span>friend!</span> <br>Discover something lovely.</h1>
+        <h1>Hello, <span>friend!</span> <br>Welcome to BabuShop.</h1>
         <p>Curated picks for your style — from tech to treasures. Fresh finds, warm prices.</p>
         <div style="display:flex; gap:12px; flex-wrap:wrap;">
           <button class="btn btn-primary" id="shopNow"><i class="fas fa-arrow-right"></i> Start shopping</button>
@@ -748,7 +747,7 @@ Here is a complete HTML document for a friendly, modern e-commerce storefront ca
   <footer>
     <div class="container" style="display:flex; flex-wrap:wrap; gap:32px; justify-content:space-between;">
       <div style="max-width:300px;">
-        <div style="font-weight:700; font-size:1.3rem; font-family:var(--font-heading);"><i class="fas fa-store-alt" style="color:var(--accent);"></i> NexusShop</div>
+        <div style="font-weight:700; font-size:1.3rem; font-family:var(--font-heading);"><i class="fas fa-store-alt" style="color:var(--accent);"></i> BabuShop</div>
         <p class="muted" style="margin-top:6px;">A friendly demo — built with care, for you.</p>
         <div style="margin-top:12px; display:flex; gap:12px;">
           <a class="icon-btn" href="#"><i class="fab fa-facebook"></i></a>
@@ -761,7 +760,7 @@ Here is a complete HTML document for a friendly, modern e-commerce storefront ca
         <div><div style="font-weight:600;">Support</div><div class="muted" style="line-height:2;">Help Center<br>Shipping<br>Contact</div></div>
       </div>
     </div>
-    <div style="text-align:center; margin-top:28px; color:var(--muted); font-size:0.8rem;">© <span id="year"></span> NexusShop · made with <i class="fas fa-heart" style="color:var(--accent);"></i></div>
+    <div style="text-align:center; margin-top:28px; color:var(--muted); font-size:0.8rem;">© <span id="year"></span> BabuShop · made with <i class="fas fa-heart" style="color:var(--accent);"></i></div>
   </footer>
 
   <script>
@@ -824,4 +823,5 @@ Here is a complete HTML document for a friendly, modern e-commerce storefront ca
             <div class="category-tag">${p.category}</div>
             <div class="price-row">
               <div><span class="price">$${p.price.toLocaleString()}</span> ${p.oldPrice ? `<span class="old-price">$${p.oldPrice.toLocaleString()}</span>` : ''}</div>
-              <div class="rating">${'★'.repeat(Math.round(p.rating))} <span style="
+              <div class="rating">${'★'.repeat(Math.round(p.rating))} <span style="font-size:0.7rem;color:var(--muted)">(${p.reviews})</span></div>
+            </div>
