@@ -1,4 +1,4 @@
-Here is the HTML code for a modern, friendly e-commerce shop interface with a warm and approachable design.
+Here is a fresh, user-friendly HTML/CSS code for a modern e-commerce shop interface. It features a warm color palette, clear product displays, and interactive elements for a pleasant browsing experience.
 ```html
 <!doctype html>
 <html lang="en">
@@ -11,7 +11,7 @@ Here is the HTML code for a modern, friendly e-commerce shop interface with a wa
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous">
   <style>
     /* ----------------------------------------------
-       FRIENDLY & WARM DESIGN SYSTEM
+       FRIENDLY & WARM DESIGN SYSTEM (refreshed UI)
     ------------------------------------------------ */
     * {
       margin: 0;
@@ -20,17 +20,17 @@ Here is the HTML code for a modern, friendly e-commerce shop interface with a wa
     }
 
     :root {
-      --bg: #fbf9f7;
+      --bg: #faf7f2;
       --card-bg: #ffffff;
-      --primary: #2d2a24;
-      --secondary: #7c6f64;
+      --primary: #2a2620;
+      --secondary: #6e6257;
       --accent: #f7a072;      /* warm peach */
       --accent-soft: #fde8d8;
       --muted: #8f847b;
       --surface: #f5f0eb;
       --success: #6b9e7b;
-      --radius-xl: 28px;
-      --radius-lg: 18px;
+      --radius-xl: 32px;
+      --radius-lg: 20px;
       --radius-md: 14px;
       --shadow-soft: 0 12px 30px rgba(45, 42, 36, 0.06);
       --shadow-hover: 0 20px 40px rgba(45, 42, 36, 0.10);
@@ -824,4 +824,4 @@ Here is the HTML code for a modern, friendly e-commerce shop interface with a wa
             <div class="category-tag">${p.category}</div>
             <div class="price-row">
               <div><span class="price">$${p.price.toLocaleString()}</span> ${p.oldPrice ? `<span class="old-price">$${p.oldPrice.toLocaleString()}</span>` : ''}</div>
-              <div class="rating">${'★'.repeat(Math.round(p.rating))} <span style="font-size:0.7rem;color:var(--muted)">(${p.reviews})</span></
+              <div class="rating">${'★'.repeat(Math.round(p.rating))} <span style="font-size:0.
