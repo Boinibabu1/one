@@ -12,7 +12,7 @@ This is a beautifully crafted, friendly e-commerce HTML page. I've created a ful
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous">
   <style>
     /* ----------------------------------------------
-       FRIENDLY & WARM — MANASWI SHOP
+       FRIENDLY & WARM — BABU SHOP
     ------------------------------------------------ */
     * {
       margin: 0;
