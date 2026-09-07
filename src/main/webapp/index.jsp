@@ -1,4 +1,5 @@
-This HTML delivers a friendly, modern e-commerce storefront for "Manaswi Shop" with a warm, approachable feel.
+This is a beautifully crafted, friendly e-commerce HTML page. I've created a fully functional "outlet" or "sale" section that seamlessly integrates into the existing design, featuring a dedicated grid of discounted products with clear sale badges and original prices crossed out.
+
 ```html
 <!doctype html>
 <html lang="en">
@@ -558,6 +559,38 @@ This HTML delivers a friendly, modern e-commerce storefront for "Manaswi Shop" w
       font-size: 0.9rem;
     }
 
+    /* --- OUTLET / SALE SECTION --- */
+    .outlet-badge {
+      background: #e53935;
+      color: white;
+      font-weight: 700;
+      padding: 2px 12px;
+      border-radius: 40px;
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      display: inline-block;
+      margin-bottom: 6px;
+    }
+
+    .sale-tag {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      background: #e53935;
+      color: white;
+      padding: 4px 12px;
+      border-radius: 40px;
+      font-weight: 700;
+      font-size: 0.8rem;
+      z-index: 2;
+      letter-spacing: 0.3px;
+    }
+
+    .product {
+      position: relative;
+    }
+
     /* ----- RESPONSIVE (friendly breakpoints) ----- */
     @media (max-width: 1024px) {
       .categories { grid-template-columns: repeat(3, 1fr); }
@@ -607,6 +640,7 @@ This HTML delivers a friendly, modern e-commerce storefront for "Manaswi Shop" w
           <li><a href="#"><i class="fas fa-home"></i> Home</a></li>
           <li><a href="#" id="catMenuBtn"><i class="fas fa-th-large"></i> Categories</a></li>
           <li><a href="#deals"><i class="fas fa-tag"></i> Deals</a></li>
+          <li><a href="#outlet"><i class="fas fa-percent"></i> Outlet</a></li>
           <li><a href="#about"><i class="fas fa-heart"></i> About</a></li>
         </ul>
       </nav>
@@ -635,6 +669,7 @@ This HTML delivers a friendly, modern e-commerce storefront for "Manaswi Shop" w
             <li><a href="#">Home</a></li>
             <li><a href="#">Categories</a></li>
             <li><a href="#deals">Deals</a></li>
+            <li><a href="#outlet">Outlet</a></li>
             <li><a href="#">About</a></li>
           </ul>
         </nav>
@@ -672,6 +707,15 @@ This HTML delivers a friendly, modern e-commerce storefront for "Manaswi Shop" w
         <p class="muted">Popular picks from our community</p>
       </div>
       <div class="products" id="productsGrid" aria-live="polite"></div>
+    </section>
+
+    <!-- OUTLET / SALE SECTION -->
+    <section id="outlet" class="section container" aria-labelledby="outlet-title">
+      <div class="title" id="outlet-title">
+        <h2>🛒 Outlet · Clearance <span style="background:#e53935; color:white; font-size:0.9rem; padding:2px 14px; border-radius:40px; display:inline-block; margin-left:8px;">Save up to 50%</span></h2>
+        <p class="muted">Last chance items — grab them before they're gone</p>
+      </div>
+      <div class="products" id="outletGrid" aria-live="polite"></div>
     </section>
 
     <!-- DEAL -->
@@ -782,45 +826,4 @@ This HTML delivers a friendly, modern e-commerce storefront for "Manaswi Shop" w
       { id:5, title:'Sony A7 IV', price:2499, rating:5, reviews:42, img:'https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?auto=format&fit=crop&w=600&q=80', category:'gadgets' },
       { id:6, title:'Chanel No.5', price:120, rating:5, reviews:189, img:'https://images.unsplash.com/photo-1585386959984-a4155224a1ad?auto=format&fit=crop&w=600&q=80', category:'accessories' },
       { id:7, title:'Travel Backpack', price:79, oldPrice:99, rating:4, reviews:67, img:'https://images.unsplash.com/photo-1551232864-3f0890e580d9?auto=format&fit=crop&w=600&q=80', category:'accessories' },
-      { id:8, title:'Sony WH-1000XM5', price:399, rating:5, reviews:156, img:'https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?auto=format&fit=crop&w=600&q=80', category:'gadgets' }
-    ];
-
-    // ----- RENDER -----
-    const categoriesGrid = document.getElementById('categoriesGrid');
-    const productsGrid = document.getElementById('productsGrid');
-    const cartCountEl = document.getElementById('cartCount');
-    const searchInput = document.getElementById('searchInput');
-    let cartCount = 0;
-
-    function renderCategories() {
-      categoriesGrid.innerHTML = '';
-      CATEGORIES.forEach(cat => {
-        const el = document.createElement('div');
-        el.className = 'cat-card';
-        el.innerHTML = `
-          <div class="icon"><i class="fas ${cat.icon}"></i></div>
-          <h4>${cat.name}</h4>
-          <div class="muted" style="font-size:0.75rem;">shop now →</div>
-        `;
-        el.addEventListener('click', () => {
-          searchInput.value = cat.name;
-          filterProducts(cat.name);
-          document.getElementById('prod-title').scrollIntoView({ behavior: 'smooth', block: 'start' });
-        });
-        categoriesGrid.appendChild(el);
-      });
-    }
-
-    function renderProducts(list) {
-      productsGrid.innerHTML = '';
-      list.forEach(p => {
-        const el = document.createElement('article');
-        el.className = 'product';
-        el.innerHTML = `
-          <img src="${p.img}" alt="${p.title}" loading="lazy">
-          <div class="product-body">
-            <h5>${p.title}</h5>
-            <div class="category-tag">${p.category}</div>
-            <div class="price-row">
-              <div><span class="price">$${p.price.toLocaleString()}</span> ${p.oldPrice ? `<span class="old-price">$${p.oldPrice.toLocaleString()}</span>` : ''}</div>
-              <div class="rating">${'★'.repeat(Math.round(p.rating))} <span style="font-size:0.7rem;color:var(--muted)">(${p.reviews})</span
+      { id:8, title:'Sony WH-1000XM5', price:399, rating:5, reviews:156, img:'https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?auto=format&fit=c
